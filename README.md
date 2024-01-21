@@ -1,7 +1,12 @@
-- 👋 Hi, I’m Saleh Mohammed
-- 👀 I’m interested in coding and building softwars
-- 🌱 I’m currently learning c++ programming language and algorithms 
-- 💞️ I’m looking to collaborate on building projects
-- 📫 How to reach me ... My Email salhbnsmyd3@gmail.com
+
+## Hello there!
+My name is Saleh Mohammed and I'm a software enthusiast.
+I'm passionate about coding and writing software that can make a difference in people's lives.
+Currently, I'm learning C++ programming language and algorithms to improve my skills and knowledge.
+I'm always looking for new opportunities to collaborate on exciting projects. If you're interested in working together,
+ feel free to reach out to me at salhbnsmyd3@gmail.com.
+
+Thank you for taking the time to read my profile README. I look forward to connecting with you soon!
+
 
 

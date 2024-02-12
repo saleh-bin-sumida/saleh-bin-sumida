@@ -7,8 +7,8 @@ Currently, I'm learning C++ programming language and algorithms to improve my sk
 I'm always looking for new opportunities to collaborate on exciting projects. If you're interested in working together,
  feel free to reach out to me at **salhbnsmyd3@gmail.com**.
  
-*[LeetCode](https://leetcode.com)
-*[LinkedIn](https://linkedin.com)
+[LeetCode](https://leetcode.com)
+[LinkedIn](https://linkedin.com)
 
 
 Thank you for taking the time to read my profile README. I look forward to connecting with you soon!

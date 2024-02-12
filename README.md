@@ -1,5 +1,5 @@
 
-![hi](url"https://thebsd.github.io/StandWithPalestine/")
+![Alt text](URL "https://thebsd.github.io/StandWithPalestine/")
 
 ### Hello there!
 ## My name is Saleh Mohammed

@@ -12,6 +12,7 @@ I'm always looking for new opportunities to collaborate on exciting projects. If
  ---------------------------------------------------------------------
  
 [LeetCode](https://leetcode.com)
+
 [LinkedIn](https://linkedin.com)
 
 [![Banner](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/3c04d405-93cb-4e89-a975-6073e3f2cda3)](https://drive.google.com/file/d/1w5G93B--xSBwV1bBJs2mOsxDUKUm6wBj/view?usp=sharing)

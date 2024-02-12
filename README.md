@@ -1,3 +1,5 @@
+
+
 ![banner-no-action](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/11710152-86cf-4f69-808c-de25b4228448) 
 
 
@@ -13,6 +15,7 @@ I'm always looking for new opportunities to collaborate on exciting projects. If
 [LinkedIn](https://linkedin.com)
 
 
+![banner-no-action](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/3c04d405-93cb-4e89-a975-6073e3f2cda3)
 
 Thank you for taking the time to read my profile README. I look forward to connecting with you soon!
 

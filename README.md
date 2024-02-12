@@ -15,7 +15,7 @@ I'm always looking for new opportunities to collaborate on exciting projects. If
 
 
 
-![top commiter](https://user-badge.committers.top/yemen/saleh-bin-sumida)
+[top commiter](https://user-badge.committers.top/yemen/saleh-bin-sumida)
 
 Thank you for taking the time to read my profile README. I look forward to connecting with you soon!
 

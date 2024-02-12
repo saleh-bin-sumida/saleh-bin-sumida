@@ -1,6 +1,4 @@
-
-![68747470733a2f2f757365722d62616467652e636f6d6d6974746572732e746f702f79656d656e2f616b72616d6768616c65622e737667](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/2c4401d4-814f-4b3a-8dbb-d0d26d50e9b5)![68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f776e6c6f61642d43562d626c7565](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/14870850-2ee2-4cf0-b6ce-53b9c3ac3616)
-![banner-no-action](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/2e11c3a9-a986-4f0d-babf-b7e41494101a)<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 130.1"><defs>
+![banner-no-action](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/11710152-86cf-4f69-808c-de25b4228448)![Uploading <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 130.1"><defs>
 
 #### Hello there!
 ## My name is Saleh Mohammed

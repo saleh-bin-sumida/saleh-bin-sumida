@@ -14,7 +14,10 @@ I'm always looking for new opportunities to collaborate on exciting projects. If
 
 [![68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c696e6b6564696e2d2532333145373742352e7376673f267374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d7768697465](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/93e836d0-8fd9-42e8-9b40-ecaabf3fdceb)](https://www.linkedin.com/in/saleh-mohammd)
 
-[![Banner](https://w7.pngwing.com/pngs/640/947/png-transparent-leetcode-button-icon.png)](https://leetcode.com/salehmohammed)  [![Banner](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/3c04d405-93cb-4e89-a975-6073e3f2cda3)](https://drive.google.com/file/d/1w5G93B--xSBwV1bBJs2mOsxDUKUm6wBj/view?usp=sharing)
+[![Banner](https://cdn.icon-icons.com/icons2/2530/PNG/512/leetcode_button_icon_151892.png)](https://leetcode.com/salehmohammed)  
+
+
+[![Banner](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/3c04d405-93cb-4e89-a975-6073e3f2cda3)](https://drive.google.com/file/d/1w5G93B--xSBwV1bBJs2mOsxDUKUm6wBj/view?usp=sharing)
 
 
 [![Top Contributors](https://github-readme-stats.vercel.app/api?username=saleh-bin-sumida&repo=saleh-bin-sumida)]([https://github.com/anuraghazra/github-readme-stats](https://user-badge.committers.top/yemen/saleh-bin-sumida))

@@ -1,6 +1,7 @@
-![banner-no-action](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/11710152-86cf-4f69-808c-de25b4228448)![Uploading <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 130.1"><defs>
+![banner-no-action](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/11710152-86cf-4f69-808c-de25b4228448) 
 
-#### Hello there!
+
+### Hello there!
 ## My name is Saleh Mohammed
 I'm IT student at *Hadramout Universty*.
 I'm passionate about coding and writing software that can make a difference in people's lives.

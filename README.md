@@ -1,4 +1,3 @@
-
 ![banner-no-action](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/11710152-86cf-4f69-808c-de25b4228448) 
 
 
@@ -9,10 +8,10 @@ I'm passionate about coding and writing software that can make a difference in p
 Currently, I'm learning C++ programming language and algorithms to improve my skills and knowledge.
 I'm always looking for new opportunities to collaborate on exciting projects. If you're interested in working together,
  feel free to reach out to me at **salhbnsmyd3@gmail.com**.
+ ---------------------------------------------------------------------
  
 [LeetCode](https://leetcode.com)
 [LinkedIn](https://linkedin.com)
-
 
 [![Banner](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/3c04d405-93cb-4e89-a975-6073e3f2cda3)](https://drive.google.com/file/d/1w5G93B--xSBwV1bBJs2mOsxDUKUm6wBj/view?usp=sharing)
 

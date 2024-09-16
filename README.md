@@ -7,15 +7,15 @@
 
 
 # My name is Saleh Mohammed
-#### I'm Back-End Developer | APS.NET Developer | Desktop Full-Stack Developer
+### Back-End Developer | APS.NET Developer | Desktop Full-Stack Developer
 
 
 
-##### I'm a college student at *Hadramout Universty* specialized in Information Technology.
+#### I'm a college student at *Hadramout Universty* specialized in Information Technology.
 
  
 
-##### Participated in building Many projects related with college and customers.
+#### Participated in building Many projects related with college and customers.
 
 
 -------------------------------------------------------

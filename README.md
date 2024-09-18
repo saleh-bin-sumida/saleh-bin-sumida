@@ -25,7 +25,7 @@
 [![68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c696e6b6564696e2d2532333145373742352e7376673f267374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d7768697465](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/93e836d0-8fd9-42e8-9b40-ecaabf3fdceb)](https://www.linkedin.com/in/saleh-mohammd)
 
 
-[![Banner](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/3c04d405-93cb-4e89-a975-6073e3f2cda3)](https://drive.google.com/file/d/1hUtvZgPVOEDdtd99wj_XUiIjEsul9Xbx/view?usp=drivesdk)
+[![Banner](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/3c04d405-93cb-4e89-a975-6073e3f2cda3)](https://drive.google.com/file/d/1MLnBbGQrcuagBScaqJjxItMS3HGFa39x/view?usp=drive_link)
 
 [![Banner](https://cdn.icon-icons.com/icons2/2530/PNG/512/leetcode_button_icon_151892.png)](https://leetcode.com/salehmohammed)  
 

@@ -7,7 +7,7 @@
 
 
 # My name is Saleh Mohammed
-### Backend Developer | APS.NET Developer | Desktop Full-Stack Developer
+### Backend Web Developer | ASP.NET Developer
 
 
 

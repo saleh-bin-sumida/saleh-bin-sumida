@@ -7,7 +7,7 @@
 
 
 # My name is Saleh Mohammed
-### Backend Web Developer | ASP.NET Developer
+### Backend Developer | ASP.NET Developer | .NET Enthusiast
 
 
 
@@ -27,11 +27,9 @@
 
 [![Banner](https://github.com/saleh-bin-sumida/saleh-bin-sumida/assets/84684414/3c04d405-93cb-4e89-a975-6073e3f2cda3)](https://drive.google.com/file/d/1MLnBbGQrcuagBScaqJjxItMS3HGFa39x/view?usp=drive_link)
 
-[![Banner](https://cdn.icon-icons.com/icons2/2530/PNG/512/leetcode_button_icon_151892.png)](https://leetcode.com/salehmohammed)  
 
+[![Banner](https://upload.wikimedia.org/wikipedia/commons/c/c2/LeetCode_Logo_2.png)](https://leetcode.com/salehmohammed)
 
-
-[![Top Contributors](https://github-readme-stats.vercel.app/api?username=saleh-bin-sumida&repo=saleh-bin-sumida)]([https://github.com/anuraghazra/github-readme-stats](https://user-badge.committers.top/yemen/saleh-bin-sumida))
 
 
 

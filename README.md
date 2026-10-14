@@ -1,5 +1,5 @@
 <h1 align="center">Hi, I'm Saleh Mohammed 👋</h1>
-<h3 align="center">Backend Developer · .NET Ecosystem</h3>
+<h3 align="center">Full Stack Developer · .NET Ecosystem</h3>
 
 <p align="center">
   <a href="https://salehmohammed.com"><img src="https://img.shields.io/badge/Website-salehmohammed.com-000000?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" /></a>
@@ -12,7 +12,7 @@
 
 ## 🧑‍💻 About Me
 
-I'm a backend developer from **Mukalla, Yemen** 🇾🇪. I build enterprise-grade RESTful APIs with **C#, ASP.NET Core 8, and Entity Framework Core**.
+I'm a full stack developer from **Mukalla, Yemen** 🇾🇪. I build enterprise-grade RESTful APIs with **C#, ASP.NET Core 8, and Entity Framework Core**.
 
 - 🔭 I'm currently building a full-scale **ERP system** at **ASAS Company**, covering Accounting, Inventory, Sales, Purchase, and Management modules.
 - 🧾 I've worked on **ZATCA e-invoicing**, JWT authentication, AWS S3 storage, and Hangfire background jobs.

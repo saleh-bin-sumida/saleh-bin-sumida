@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saleh Mohammed Brand Guide</title>
+<meta name="description" content="Visual identity of Saleh Mohammed (salehmohammed.com): logo, colors, typography and Instagram portfolio post rules.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+    /* Layout: single dark column (max 1040px); each section = label + title + content; post examples in a 4-up grid of 4:5 frames */
+    :root {
+        --black: #000000;
+        --white: #FFFFFF;
+        --violet: #6D4AFF;
+        --violet-soft: #8B72FF;
+        --violet-deep: #5333E6;
+        --gray: #888888;
+        --line: #333333;
+        --surface: #0D0D0F;
+        --surface-2: #161619;
+        --font-brand: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+        --font-ar: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+        --font-mono: 'JetBrains Mono', Consolas, monospace;
+        color-scheme: dark;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        background: var(--black);
+        color: var(--white);
+        font-family: var(--font-ar);
+        font-size: 16px;
+        line-height: 1.75;
+        padding-block: 56px 96px;
+        padding-left: max(16px, env(safe-area-inset-left, 0px));
+        padding-right: max(16px, env(safe-area-inset-right, 0px));
+    }
+
+    .wrap { max-width: 1040px; margin: 0 auto; display: grid; gap: 88px; }
+
+    code, .mono { font-family: var(--font-mono); font-size: .9em; direction: ltr; unicode-bidi: isolate; }
+    .en { font-family: var(--font-brand); direction: ltr; unicode-bidi: isolate; }
+    p { max-width: 68ch; color: #cfcfd4; }
+    strong { color: var(--white); }
+
+    /* ---------- hero ---------- */
+    .hero { display: grid; gap: 28px; }
+    .hero-top { display: flex; align-items: center; gap: 20px; direction: ltr; justify-content: flex-end; }
+    .hero-top svg { width: 72px; height: 72px; flex: none; }
+    .hero-top b { font-family: var(--font-brand); font-weight: 800; font-size: 28px; letter-spacing: -.03em; display: block; line-height: 1.1; }
+    .hero-top span { font-family: var(--font-brand); font-size: 13px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--violet-soft); }
+    .hero h1 { font-size: clamp(34px, 6vw, 60px); line-height: 1.15; font-weight: 700; text-wrap: balance; }
+    .hero h1 em { font-style: normal; color: var(--violet-soft); }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px 24px; color: var(--gray); font-size: 14px; }
+
+    .note {
+        border: 1px solid var(--line);
+        border-right: 3px solid var(--violet);
+        background: var(--surface);
+        border-radius: 12px;
+        padding: 18px 22px;
+        max-width: 76ch;
+    }
+    .note p { color: #d9d9de; }
+
+    /* ---------- sections ---------- */
+    section { display: grid; gap: 28px; }
+    .sec-head { display: grid; gap: 6px; }
+    .sec-label { font-family: var(--font-brand); font-size: 12px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--violet-soft); direction: ltr; text-align: right; }
+    h2 { font-size: clamp(24px, 3.4vw, 32px); line-height: 1.3; text-wrap: balance; }
+    h3 { font-size: 18px; line-height: 1.4; }
+
+    .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; min-width: 0; }
+
+    .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    th, td { text-align: right; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--gray); font-weight: 500; font-size: 13px; }
+    .table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+    .table-scroll table tr:last-child td { border-bottom: 0; }
+
+    ul.rules { list-style: none; display: grid; gap: 10px; }
+    ul.rules li { position: relative; padding-right: 22px; color: #d9d9de; max-width: 72ch; }
+    ul.rules li::before { content: ""; position: absolute; right: 0; top: .72em; width: 8px; height: 8px; border-radius: 2px; background: var(--violet); }
+
+    /* ---------- identity ---------- */
+    .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+    .fact { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: grid; gap: 4px; min-width: 0; }
+    .fact small { color: var(--gray); font-size: 13px; }
+    .fact b { font-family: var(--font-brand); font-weight: 500; direction: ltr; unicode-bidi: isolate; text-align: right; overflow-wrap: anywhere; }
+
+    /* ---------- logo ---------- */
+    .logo-stage { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+    .logo-stage > div { border-radius: 14px; display: grid; place-items: center; gap: 12px; padding: 32px 16px 18px; border: 1px solid var(--line); }
+    .logo-stage svg { width: 112px; height: 112px; }
+    .logo-stage small { color: var(--gray); font-size: 13px; }
+    .bg-black { background: var(--black); }
+    .bg-white { background: var(--white); }
+    .bg-white small { color: #555; }
+    .bg-gray { background: #26262b; }
+
+    .clear-space { display: grid; place-items: center; padding: 36px 16px; }
+    .cs-box { position: relative; padding: 32px; border: 1px dashed var(--violet-soft); border-radius: 6px; }
+    .cs-box svg { width: 128px; height: 128px; display: block; }
+    .cs-tag { position: absolute; font-family: var(--font-mono); font-size: 11px; color: var(--violet-soft); direction: ltr; }
+    .cs-tag.t { top: 8px; left: 50%; transform: translateX(-50%); }
+    .cs-tag.r { right: 4px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+
+    .sizes { display: flex; align-items: flex-end; gap: 22px; flex-wrap: wrap; direction: ltr; justify-content: center; }
+    .sizes figure { display: grid; justify-items: center; gap: 6px; }
+    .sizes figcaption { font-family: var(--font-mono); font-size: 11px; color: var(--gray); }
+
+    .lockup { display: flex; align-items: center; gap: 18px; direction: ltr; justify-content: center; padding: 28px 8px; flex-wrap: wrap; }
+    .lockup svg { width: 60px; height: 60px; flex: none; }
+    .lockup b { font-family: var(--font-brand); font-weight: 800; font-size: 26px; letter-spacing: -.035em; display: block; line-height: 1.1; }
+    .lockup span { font-family: var(--font-brand); font-size: 12px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--violet-soft); }
+
+    .dont { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 12px; }
+    .dont figure { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px 12px 14px; display: grid; justify-items: center; gap: 12px; text-align: center; }
+    .dont .demo { width: 80px; height: 80px; display: grid; place-items: center; border-radius: 10px; }
+    .dont svg { width: 64px; height: 64px; }
+    .dont figcaption { font-size: 14px; color: #d9d9de; line-height: 1.5; }
+    .dont figcaption::before { content: "✕ "; color: #ff6b6b; font-weight: 700; }
+    .dont .ok figcaption::before { content: "✓ "; color: #4ade80; }
+
+    /* ---------- colors ---------- */
+    .swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 12px; }
+    .swatch { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--surface); display: grid; min-width: 0; }
+    .chip { height: 96px; }
+    .swatch .info { padding: 12px 14px 14px; display: grid; gap: 2px; }
+    .swatch b { font-size: 15px; }
+    .swatch code { color: var(--white); font-size: 14px; text-align: right; }
+    .swatch small { color: var(--gray); font-size: 13px; line-height: 1.5; }
+
+    .ratio { display: flex; height: 44px; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); direction: ltr; }
+    .ratio div { display: grid; place-items: center; font-family: var(--font-mono); font-size: 12px; }
+
+    /* ---------- type ---------- */
+    .type-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 220px); gap: 20px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .type-row:last-child { border-bottom: 0; }
+    .type-row .spec { color: var(--gray); font-size: 13px; line-height: 1.6; }
+    .type-row .spec code { color: #cfcfd4; }
+    .t-display { font-family: var(--font-brand); font-weight: 800; font-size: clamp(36px, 6vw, 64px); letter-spacing: -.04em; line-height: 1; direction: ltr; text-align: right; }
+    .t-label { font-family: var(--font-brand); font-weight: 500; font-size: 18px; letter-spacing: .15em; text-transform: uppercase; color: var(--violet-soft); direction: ltr; text-align: right; }
+    .t-body { font-family: var(--font-brand); font-size: 18px; direction: ltr; text-align: right; color: #d9d9de; }
+    .t-ar { font-family: var(--font-ar); font-weight: 700; font-size: clamp(28px, 4.5vw, 44px); line-height: 1.3; }
+    .t-mono { font-family: var(--font-mono); font-size: 17px; color: var(--violet-soft); direction: ltr; text-align: right; }
+    @media (max-width: 640px) { .type-row { grid-template-columns: 1fr; gap: 8px; } }
+
+    /* ---------- UI bits ---------- */
+    .ui-demo { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; direction: ltr; justify-content: flex-end; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: .6rem 1.15rem; border: 1px solid var(--line); border-radius: 999px; color: #bbb; font-family: var(--font-brand); font-size: 15px; font-weight: 500; }
+    .pill.hover { background: var(--violet); border-color: var(--violet); color: var(--white); }
+    .tag { display: inline-flex; padding: .3rem .8rem; border-radius: 999px; background: rgba(109, 74, 255, .14); border: 1px solid rgba(139, 114, 255, .35); color: var(--violet-soft); font-family: var(--font-brand); font-size: 13px; font-weight: 500; }
+
+    /* ---------- Instagram posts ---------- */
+    /* slides run left to right, like swiping on Instagram */
+    .posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px; direction: ltr; }
+    .post-wrap { display: grid; gap: 10px; min-width: 0; direction: rtl; align-content: start; }
+    .post-wrap > small { color: var(--gray); font-size: 13px; line-height: 1.5; }
+    .post-wrap > small b { color: var(--white); font-weight: 500; }
+
+    /* every post is 1080x1350; all sizes are in cqw so the preview scales exactly (1cqw = 10.8px on the real canvas) */
+    .post {
+        container-type: inline-size;
+        aspect-ratio: 4 / 5;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        background: var(--black);
+        border: 1px solid var(--line);
+        direction: ltr;
+        font-family: var(--font-brand);
+        color: var(--white);
+    }
+    .post-in { position: relative; height: 100%; padding: 7.4cqw; display: flex; flex-direction: column; }
+    .p-brand { display: flex; align-items: center; gap: 2.4cqw; }
+    .p-brand svg { width: 6cqw; height: 6cqw; }
+    .p-brand span { font-weight: 800; font-size: 3.3cqw; letter-spacing: -.03em; }
+    .p-brand em { font-style: normal; margin-left: auto; font-weight: 500; font-size: 2.4cqw; letter-spacing: .15em; color: var(--gray); }
+    .p-eyebrow { font-weight: 500; font-size: 2.6cqw; letter-spacing: .15em; text-transform: uppercase; color: var(--violet-soft); }
+    .p-title { font-weight: 800; font-size: 9.6cqw; letter-spacing: -.04em; line-height: .98; }
+    .p-sub { font-family: var(--font-ar); font-size: 3.6cqw; color: #cfcfd4; direction: rtl; text-align: left; line-height: 1.5; }
+    .p-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-weight: 500; font-size: 2.5cqw; color: var(--gray); }
+    .p-foot b { color: var(--white); font-weight: 500; }
+    .p-dots { display: flex; gap: 1.1cqw; }
+    .p-dots i { width: 1.3cqw; height: 1.3cqw; border-radius: 50%; background: #444; }
+    .p-dots i.on { background: var(--violet); }
+
+    .browser { border-radius: 2cqw; border: .3cqw solid #2a2a2e; background: #121215; overflow: hidden; display: flex; flex-direction: column; }
+    .browser .bar { height: 5cqw; background: #1c1c20; display: flex; align-items: center; gap: 1cqw; padding: 0 2.2cqw; flex: none; }
+    .browser .bar i { width: 1.3cqw; height: 1.3cqw; border-radius: 50%; background: #3a3a40; }
+    .browser .bar span { margin-left: 2cqw; flex: 1; height: 2.6cqw; border-radius: 99px; background: #26262b; font-size: 1.6cqw; color: var(--gray); display: flex; align-items: center; padding-left: 1.6cqw; }
+    .browser .shot { flex: 1; display: grid; place-items: center; text-align: center; font-size: 2.2cqw; color: #6f6f78; background:
+        repeating-linear-gradient(135deg, #141417 0 1.4cqw, #17171b 1.4cqw 2.8cqw); }
+
+    .p-cover .p-text { display: grid; gap: 2.6cqw; margin-top: 6cqw; }
+    .p-cover .browser { margin-top: 5.5cqw; height: 44cqw; }
+
+    .p-shot .p-cap { margin-top: 5cqw; display: grid; gap: 1.6cqw; }
+    .p-shot .p-cap b { font-weight: 800; font-size: 5.6cqw; letter-spacing: -.03em; line-height: 1.05; }
+    .p-shot .browser { margin-top: 4.5cqw; flex: 1; }
+
+    .p-stack .p-text { margin-top: 9cqw; display: grid; gap: 3cqw; }
+    .p-stack .grid-tags { display: flex; flex-wrap: wrap; gap: 2cqw; margin-top: 2cqw; }
+    .p-stack .grid-tags span { padding: 1.6cqw 3.2cqw; border-radius: 99px; border: .25cqw solid rgba(139,114,255,.45); background: rgba(109,74,255,.14); color: var(--violet-soft); font-weight: 500; font-size: 3.2cqw; }
+    .p-stack ul { list-style: none; display: grid; gap: 2cqw; margin-top: 4cqw; }
+    .p-stack li { display: flex; gap: 2.4cqw; align-items: baseline; font-size: 3.4cqw; color: #d9d9de; }
+    .p-stack li::before { content: ""; width: 1.6cqw; height: 1.6cqw; border-radius: .4cqw; background: var(--violet); flex: none; transform: translateY(-.2cqw); }
+
+    .p-cta { background: var(--violet); }
+    .p-cta .post-in { justify-content: center; align-items: flex-start; gap: 4cqw; }
+    .p-cta svg.big { width: 18cqw; height: 18cqw; }
+    .p-cta .p-title { font-size: 8.4cqw; }
+    .p-cta .p-sub { color: rgba(255,255,255,.88); font-size: 3.8cqw; }
+    .p-cta .url { font-weight: 800; font-size: 5cqw; letter-spacing: -.02em; padding: 2cqw 4cqw; background: var(--black); border-radius: 99px; margin-top: 2cqw; }
+    .p-cta .handle { font-weight: 500; font-size: 3cqw; color: rgba(255,255,255,.85); }
+    .p-cta .p-dots i { background: rgba(255,255,255,.35); }
+    .p-cta .p-dots i.on { background: var(--white); }
+    .p-cta .p-foot { position: absolute; left: 7.4cqw; right: 7.4cqw; bottom: 7.4cqw; color: rgba(255,255,255,.8); }
+
+    .spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 12px; }
+    .spec-grid .panel { padding: 18px 20px; display: grid; gap: 6px; align-content: start; }
+    .spec-grid .panel b { font-size: 15px; }
+    .spec-grid .panel span { color: #cfcfd4; font-size: 14px; line-height: 1.65; }
+
+    pre {
+        background: var(--surface-2);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 20px 22px;
+        overflow-x: auto;
+        font-family: var(--font-ar);
+        font-size: 15px;
+        line-height: 1.9;
+        white-space: pre-wrap;
+        color: #e4e4e8;
+    }
+    pre.code { font-family: var(--font-mono); font-size: 13px; line-height: 1.7; direction: ltr; text-align: left; white-space: pre; }
+
+    .copy-row { display: flex; justify-content: flex-start; gap: 12px; align-items: center; flex-wrap: wrap; }
+    button.copy {
+        font: 500 14px var(--font-ar);
+        background: transparent;
+        color: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 18px;
+        cursor: pointer;
+        transition: background-color .2s, border-color .2s;
+    }
+    button.copy:hover, button.copy:focus-visible { background: var(--violet); border-color: var(--violet); outline: none; }
+    .copy-row span { color: var(--gray); font-size: 13px; }
+
+    footer { color: var(--gray); font-size: 14px; border-top: 1px solid var(--line); padding-top: 24px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<!-- The SM mark: violet tile + white letters. Reused everywhere via <use href="#sm">. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="sm" viewBox="0 0 64 64">
+        <rect width="64" height="64" rx="14" fill="#6D4AFF"/>
+        <path fill="#fff" d="M18.99 43.21Q16.27 43.21 14.25 42.39Q12.22 41.57 11.1 39.9Q9.97 38.23 9.92 35.71H14.89Q14.96 36.76 15.47 37.48Q15.97 38.2 16.86 38.56Q17.75 38.91 18.93 38.91Q20 38.91 20.78 38.62Q21.56 38.33 21.97 37.8Q22.39 37.27 22.39 36.57Q22.39 35.94 22 35.5Q21.61 35.06 20.84 34.72Q20.06 34.39 18.86 34.12L16.55 33.58Q13.72 32.94 12.11 31.47Q10.5 30.01 10.5 27.55Q10.5 25.53 11.59 24Q12.69 22.48 14.6 21.64Q16.52 20.79 18.99 20.79Q21.53 20.79 23.39 21.65Q25.25 22.51 26.27 24.04Q27.3 25.57 27.33 27.59H22.36Q22.26 26.4 21.39 25.75Q20.53 25.09 18.98 25.09Q17.95 25.09 17.25 25.36Q16.55 25.63 16.19 26.1Q15.84 26.58 15.84 27.2Q15.84 27.87 16.24 28.33Q16.63 28.79 17.37 29.1Q18.1 29.41 19.06 29.63L20.95 30.07Q22.54 30.4 23.77 30.98Q25.01 31.56 25.87 32.37Q26.73 33.17 27.17 34.23Q27.62 35.28 27.62 36.58Q27.62 38.65 26.59 40.14Q25.55 41.62 23.63 42.42Q21.7 43.21 18.99 43.21ZM29.17 42.91V21.09H37.23L40.01 29.58Q40.25 30.36 40.55 31.64Q40.85 32.92 41.16 34.39Q41.46 35.85 41.72 37.21Q41.98 38.58 42.14 39.56H41.16Q41.32 38.59 41.57 37.23Q41.83 35.87 42.13 34.4Q42.43 32.92 42.73 31.65Q43.03 30.37 43.27 29.58L46 21.09H54.08V42.91H48.88V33.51Q48.88 32.78 48.9 31.63Q48.93 30.48 48.97 29.13Q49.01 27.78 49.04 26.41Q49.08 25.04 49.08 23.86H49.39Q49.12 25.16 48.78 26.55Q48.44 27.94 48.09 29.26Q47.75 30.58 47.43 31.68Q47.12 32.78 46.9 33.51L43.79 42.91H39.47L36.32 33.51Q36.1 32.79 35.78 31.69Q35.46 30.59 35.11 29.28Q34.75 27.96 34.4 26.57Q34.05 25.17 33.76 23.86H34.14Q34.15 25.01 34.18 26.38Q34.21 27.74 34.25 29.1Q34.29 30.46 34.32 31.61Q34.36 32.76 34.36 33.51V42.91Z"/>
+    </symbol>
+    <symbol id="sm-letters" viewBox="0 0 64 64">
+        <path d="M18.99 43.21Q16.27 43.21 14.25 42.39Q12.22 41.57 11.1 39.9Q9.97 38.23 9.92 35.71H14.89Q14.96 36.76 15.47 37.48Q15.97 38.2 16.86 38.56Q17.75 38.91 18.93 38.91Q20 38.91 20.78 38.62Q21.56 38.33 21.97 37.8Q22.39 37.27 22.39 36.57Q22.39 35.94 22 35.5Q21.61 35.06 20.84 34.72Q20.06 34.39 18.86 34.12L16.55 33.58Q13.72 32.94 12.11 31.47Q10.5 30.01 10.5 27.55Q10.5 25.53 11.59 24Q12.69 22.48 14.6 21.64Q16.52 20.79 18.99 20.79Q21.53 20.79 23.39 21.65Q25.25 22.51 26.27 24.04Q27.3 25.57 27.33 27.59H22.36Q22.26 26.4 21.39 25.75Q20.53 25.09 18.98 25.09Q17.95 25.09 17.25 25.36Q16.55 25.63 16.19 26.1Q15.84 26.58 15.84 27.2Q15.84 27.87 16.24 28.33Q16.63 28.79 17.37 29.1Q18.1 29.41 19.06 29.63L20.95 30.07Q22.54 30.4 23.77 30.98Q25.01 31.56 25.87 32.37Q26.73 33.17 27.17 34.23Q27.62 35.28 27.62 36.58Q27.62 38.65 26.59 40.14Q25.55 41.62 23.63 42.42Q21.7 43.21 18.99 43.21ZM29.17 42.91V21.09H37.23L40.01 29.58Q40.25 30.36 40.55 31.64Q40.85 32.92 41.16 34.39Q41.46 35.85 41.72 37.21Q41.98 38.58 42.14 39.56H41.16Q41.32 38.59 41.57 37.23Q41.83 35.87 42.13 34.4Q42.43 32.92 42.73 31.65Q43.03 30.37 43.27 29.58L46 21.09H54.08V42.91H48.88V33.51Q48.88 32.78 48.9 31.63Q48.93 30.48 48.97 29.13Q49.01 27.78 49.04 26.41Q49.08 25.04 49.08 23.86H49.39Q49.12 25.16 48.78 26.55Q48.44 27.94 48.09 29.26Q47.75 30.58 47.43 31.68Q47.12 32.78 46.9 33.51L43.79 42.91H39.47L36.32 33.51Q36.1 32.79 35.78 31.69Q35.46 30.59 35.11 29.28Q34.75 27.96 34.4 26.57Q34.05 25.17 33.76 23.86H34.14Q34.15 25.01 34.18 26.38Q34.21 27.74 34.25 29.1Q34.29 30.46 34.32 31.61Q34.36 32.76 34.36 33.51V42.91Z"/>
+    </symbol>
+</svg>
+
+<div class="wrap">
+
+    <!-- ================= HERO ================= -->
+    <header class="hero">
+        <div class="hero-top">
+            <svg role="img" aria-label="SM logo"><use href="#sm"/></svg>
+            <div>
+                <b>Saleh Mohammed</b>
+                <span>Full Stack Developer</span>
+            </div>
+        </div>
+        <h1>الهوية البصرية لـ <em class="en">Saleh Mohammed</em></h1>
+        <div class="meta">
+            <span>الإصدار 1.0</span>
+            <span>18 أكتوبر 2026</span>
+            <span class="en">salehmohammed.com</span>
+        </div>
+        <div class="note">
+            <p><strong>لمن يصمّم منشوراً أو صفحة لي:</strong> هذا الملف هو المرجع الوحيد للشعار والألوان والخطوط وشكل منشورات Instagram. اتبعه كما هو. إن احتجت قراراً غير موجود هنا، اختر الأبسط والأقرب لروح الصفحة: أسود وأبيض، ولمسة بنفسجية واحدة. القيم الجاهزة للنسخ موجودة في آخر الملف.</p>
+        </div>
+    </header>
+
+    <!-- ================= 01 IDENTITY ================= -->
+    <section>
+        <div class="sec-head">
+            <div class="sec-label">01 · Identity</div>
+            <h2>من أنا</h2>
+        </div>
+        <div class="facts">
+            <div class="fact"><small>الاسم</small><b>Saleh Mohammed</b></div>
+            <div class="fact"><small>اللقب</small><b>Full Stack Developer</b></div>
+            <div class="fact"><small>التخصص</small><b>.NET · ASP.NET Core · Blazor</b></div>
+            <div class="fact"><small>الموقع</small><b>salehmohammed.com</b></div>
+            <div class="fact"><small>Instagram</small><b>@salehmohmmmd</b></div>
+            <div class="fact"><small>GitHub</small><b>github.com/saleh-bin-sumida</b></div>
+            <div class="fact"><small>LinkedIn</small><b>linkedin.com/in/saleh-mohammd</b></div>
+            <div class="fact"><small>المدينة</small><b>Mukalla, Yemen</b></div>
+        </div>
+        <div class="panel">
+            <h3>الطابع العام</h3>
+            <ul class="rules" style="margin-top:14px">
+                <li><strong>بسيط ومباشر:</strong> مساحات سوداء واسعة، ونص أبيض كبير، ولا زخارف.</li>
+                <li><strong>تقني بلا مبالغة:</strong> الكود والتقنيات تُذكر بأسمائها، بدون رسومات "هاكر" أو خلفيات أكواد مزدحمة.</li>
+                <li><strong>البنفسجي توقيع، لا خلفية:</strong> يظهر في الشعار وفي لمسة واحدة أو اثنتين في كل تصميم. الاستثناء الوحيد: الشريحة الأخيرة في المنشور.</li>
+                <li><strong>العمل هو البطل:</strong> لقطة شاشة الموقع أكبر عنصر في المنشور، والنص يخدمها.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ================= 02 LOGO ================= -->
+    <section>
+        <div class="sec-head">
+            <div class="sec-label">02 · Logo</div>
+            <h2>الشعار</h2>
+            <p>مربّع بنفسجي بزوايا دائرية، وبداخله الحرفان <span class="en">SM</span> بالأبيض بخط <span class="en">Inter ExtraBold</span>. نصف قطر الزوايا = 22% من عرض المربّع (<code>rx 14</code> من <code>64</code>).</p>
+        </div>
+
+        <div class="logo-stage">
+            <div class="bg-black"><svg role="img" aria-label="SM logo on black"><use href="#sm"/></svg><small>على الأسود: الاستخدام الأساسي</small></div>
+            <div class="bg-white"><svg role="img" aria-label="SM logo on white"><use href="#sm"/></svg><small>على الأبيض: مسموح</small></div>
+            <div class="bg-gray"><svg role="img" aria-label="SM logo on gray"><use href="#sm"/></svg><small>على الرمادي الغامق: مسموح</small></div>
+        </div>
+
+        <div class="two">
+            <div class="panel">
+                <h3>المسافة الفارغة حول الشعار</h3>
+                <div class="clear-space">
+                    <div class="cs-box">
+                        <span class="cs-tag t">¼ W</span>
+                        <span class="cs-tag r">¼ W</span>
+                        <svg role="img" aria-label="Clear space"><use href="#sm"/></svg>
+                    </div>
+                </div>
+                <p>اترك حول الشعار مسافة لا تقل عن ربع عرضه من كل جهة. لا نص ولا صورة داخل هذه المسافة.</p>
+            </div>
+            <div class="panel">
+                <h3>أصغر حجم</h3>
+                <div class="sizes" style="padding:28px 0 18px">
+                    <figure><svg width="96" height="96"><use href="#sm"/></svg><figcaption>96px</figcaption></figure>
+                    <figure><svg width="48" height="48"><use href="#sm"/></svg><figcaption>48px</figcaption></figure>
+                    <figure><svg width="32" height="32"><use href="#sm"/></svg><figcaption>32px</figcaption></figure>
+                    <figure><svg width="16" height="16"><use href="#sm"/></svg><figcaption>16px</figcaption></figure>
+                </div>
+                <p>أصغر حجم مسموح <code>16px</code> (أيقونة المتصفح). في منشورات Instagram لا يقل عن <code>64px</code> على تصميم عرضه <code>1080px</code>.</p>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h3>الشعار مع الاسم (Lockup)</h3>
+            <div class="lockup">
+                <svg role="img" aria-label="SM logo"><use href="#sm"/></svg>
+                <div><b>Saleh Mohammed</b><span>Full Stack Developer</span></div>
+            </div>
+            <p>المسافة بين الشعار والاسم = ثلث عرض الشعار. الاسم بخط <span class="en">Inter 800</span>، واللقب تحته بحروف كبيرة متباعدة باللون البنفسجي الفاتح.</p>
+        </div>
+
+        <div class="dont">
+            <figure class="ok"><div class="demo"><svg><use href="#sm"/></svg></div><figcaption>الشعار كما هو</figcaption></figure>
+            <figure><div class="demo"><svg style="transform:scaleX(1.45)"><use href="#sm"/></svg></div><figcaption>لا تمطّه أو تضغطه</figcaption></figure>
+            <figure><div class="demo"><svg style="filter:hue-rotate(120deg)"><use href="#sm"/></svg></div><figcaption>لا تغيّر لونه</figcaption></figure>
+            <figure><div class="demo" style="background:var(--violet)"><svg><use href="#sm"/></svg></div><figcaption>لا تضعه على خلفية بنفسجية</figcaption></figure>
+            <figure><div class="demo"><svg style="filter:drop-shadow(0 0 10px #8B72FF) drop-shadow(0 6px 6px #000)"><use href="#sm"/></svg></div><figcaption>لا ظلال ولا توهّج ولا تدرّجات</figcaption></figure>
+            <figure><div class="demo"><svg style="transform:rotate(-14deg)"><use href="#sm"/></svg></div><figcaption>لا تُدِره</figcaption></figure>
+        </div>
+        <p>على خلفية بنفسجية (الشريحة الأخيرة فقط) استخدم الحرفين وحدهما بالأبيض بدون المربّع.</p>
+    </section>
+
+    <!-- ================= 03 COLOR ================= -->
+    <section>
+        <div class="sec-head">
+            <div class="sec-label">03 · Color</div>
+            <h2>الألوان</h2>
+            <p>الأسود والأبيض هما الأساس. البنفسجي يأخذ حوالي 10% فقط من أي تصميم، ولهذا يلفت العين.</p>
+        </div>
+
+        <div class="ratio" aria-label="Color ratio">
+            <div style="flex:60;background:#000;color:#888">Black 60%</div>
+            <div style="flex:30;background:#fff;color:#000">White 30%</div>
+            <div style="flex:10;background:var(--violet);color:#fff">10%</div>
+        </div>
+
+        <div class="swatches">
+            <div class="swatch"><div class="chip" style="background:#000;border-bottom:1px solid var(--line)"></div><div class="info"><b>Black</b><code>#000000</code><small>الخلفية الأساسية لكل شيء</small></div></div>
+            <div class="swatch"><div class="chip" style="background:#fff"></div><div class="info"><b>White</b><code>#FFFFFF</code><small>العناوين والنصوص الأساسية</small></div></div>
+            <div class="swatch"><div class="chip" style="background:#6D4AFF"></div><div class="info"><b>Violet</b><code>#6D4AFF</code><small>الشعار، الأزرار، العناصر الكبيرة، خلفية الشريحة الأخيرة</small></div></div>
+            <div class="swatch"><div class="chip" style="background:#8B72FF"></div><div class="info"><b>Violet Soft</b><code>#8B72FF</code><small>النص البنفسجي الصغير فوق الأسود</small></div></div>
+            <div class="swatch"><div class="chip" style="background:#5333E6"></div><div class="info"><b>Violet Deep</b><code>#5333E6</code><small>حالة الضغط ومرور الماوس على البنفسجي</small></div></div>
+            <div class="swatch"><div class="chip" style="background:#888"></div><div class="info"><b>Gray</b><code>#888888</code><small>النصوص الثانوية: الرابط، التاريخ، الملاحظات</small></div></div>
+            <div class="swatch"><div class="chip" style="background:#333"></div><div class="info"><b>Line</b><code>#333333</code><small>الحدود والفواصل الرفيعة</small></div></div>
+        </div>
+
+        <div class="table-scroll">
+            <table>
+                <thead><tr><th>النص</th><th>الخلفية</th><th>درجة الوضوح</th><th>الحكم</th></tr></thead>
+                <tbody>
+                    <tr><td>أبيض</td><td>أسود</td><td class="mono">21 : 1</td><td>✓ لكل الأحجام</td></tr>
+                    <tr><td><code>#8B72FF</code></td><td>أسود</td><td class="mono">5.9 : 1</td><td>✓ لكل الأحجام</td></tr>
+                    <tr><td><code>#6D4AFF</code></td><td>أسود</td><td class="mono">4.1 : 1</td><td>للعناوين الكبيرة والأشكال فقط، ليس للنص الصغير</td></tr>
+                    <tr><td>أبيض</td><td><code>#6D4AFF</code></td><td class="mono">5.2 : 1</td><td>✓ لكل الأحجام</td></tr>
+                    <tr><td><code>#6D4AFF</code></td><td>أبيض</td><td class="mono">5.2 : 1</td><td>✓ لكل الأحجام</td></tr>
+                    <tr><td><code>#888888</code></td><td>أسود</td><td class="mono">5.9 : 1</td><td>✓ للنص الثانوي</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ================= 04 TYPE ================= -->
+    <section>
+        <div class="sec-head">
+            <div class="sec-label">04 · Typography</div>
+            <h2>الخطوط</h2>
+            <p>خط واحد للإنجليزية (<span class="en">Inter</span>)، وخط واحد للعربية (<span class="en">IBM Plex Sans Arabic</span>)، وخط للكود عند الحاجة فقط. كلها مجانية من <span class="en">Google Fonts</span>.</p>
+        </div>
+        <div class="panel" style="padding-block:4px">
+            <div class="type-row">
+                <div class="t-display">Saleh Mohammed</div>
+                <div class="spec">العنوان الكبير<br><code>Inter 800</code><br><code>letter-spacing: -0.04em</code><br><code>line-height: 1</code></div>
+            </div>
+            <div class="type-row">
+                <div class="t-label">Full Stack Developer</div>
+                <div class="spec">التسمية الصغيرة (Label)<br><code>Inter 500 · UPPERCASE</code><br><code>letter-spacing: 0.15em</code></div>
+            </div>
+            <div class="type-row">
+                <div class="t-body">Enterprise APIs and web apps built with ASP.NET Core and Blazor.</div>
+                <div class="spec">النص العادي بالإنجليزية<br><code>Inter 400</code><br><code>line-height: 1.6</code></div>
+            </div>
+            <div class="type-row">
+                <div class="t-ar">منصة لإدارة حلقات تحفيظ القرآن</div>
+                <div class="spec">العربية (عناوين ونصوص)<br><code>IBM Plex Sans Arabic 700 / 400</code><br><code>line-height: 1.5</code></div>
+            </div>
+            <div class="type-row">
+                <div class="t-mono">&lt;ProjectCard Client="..." /&gt;</div>
+                <div class="spec">الكود (نادراً، كلمسة فقط)<br><code>JetBrains Mono 400</code></div>
+            </div>
+        </div>
+        <ul class="rules">
+            <li>العناوين الإنجليزية دائماً <span class="en">Inter 800</span> بتباعد سالب بين الحروف، فتبدو متماسكة وثقيلة.</li>
+            <li>لا تستخدم أكثر من وزنين في التصميم الواحد (مثلاً 800 للعنوان و500 للباقي).</li>
+            <li>لا خطوط مزخرفة، ولا خط مائل، ولا خطوط "تقنية" مثل الخطوط ذات المظهر الآلي.</li>
+        </ul>
+    </section>
+
+    <!-- ================= 05 UI ================= -->
+    <section>
+        <div class="sec-head">
+            <div class="sec-label">05 · Elements</div>
+            <h2>العناصر المتكررة</h2>
+        </div>
+        <div class="two">
+            <div class="panel" style="display:grid;gap:16px">
+                <h3>الأزرار والروابط</h3>
+                <div class="ui-demo">
+                    <span class="pill">GitHub</span>
+                    <span class="pill hover">Instagram</span>
+                </div>
+                <p>شكل حبّة (<code>border-radius: 999px</code>) بحدّ رمادي رفيع. عند مرور الماوس تصير بنفسجية بنص أبيض. هذا ما يستخدمه الموقع.</p>
+            </div>
+            <div class="panel" style="display:grid;gap:16px">
+                <h3>وسوم التقنيات</h3>
+                <div class="ui-demo">
+                    <span class="tag">ASP.NET Core</span>
+                    <span class="tag">Blazor</span>
+                    <span class="tag">SQL Server</span>
+                    <span class="tag">EF Core</span>
+                </div>
+                <p>خلفية بنفسجية شفافة (14%)، وحدّ بنفسجي شفاف، ونص <code>#8B72FF</code>. تُكتب أسماء التقنيات بإملائها الرسمي: <span class="en">ASP.NET Core</span> وليس <span class="en">asp.net</span>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 06 INSTAGRAM ================= -->
+    <section>
+        <div class="sec-head">
+            <div class="sec-label">06 · Instagram</div>
+            <h2>منشورات الأعمال على Instagram</h2>
+            <p>كل مشروع يُنشر كـ <strong>Carousel</strong> من 4 إلى 6 شرائح بمقاس <code>1080 × 1350</code> (عمودي 4:5). الترتيب ثابت دائماً، فيعرف المتابع ماذا ينتظر في كل شريحة. هذا مثال بمشروع حقيقي:</p>
+        </div>
+
+        <div class="posts">
+            <!-- Slide 1: cover -->
+            <div class="post-wrap">
+                <div class="post p-cover"><div class="post-in">
+                    <div class="p-brand"><svg><use href="#sm"/></svg><span>Saleh Mohammed</span><em>01 / 04</em></div>
+                    <div class="p-text">
+                        <div class="p-eyebrow">New Project · SaaS</div>
+                        <div class="p-title">Tulab<br>Al-Wahy</div>
+                        <div class="p-sub">منصة لإدارة حلقات تحفيظ القرآن</div>
+                    </div>
+                    <div class="browser"><div class="bar"><i></i><i></i><i></i><span>tulab-alwahy.com</span></div><div class="shot">لقطة الصفحة الرئيسية</div></div>
+                    <div class="p-foot"><span><b>salehmohammed.com</b></span><div class="p-dots"><i class="on"></i><i></i><i></i><i></i></div></div>
+                </div></div>
+                <small><b>1. الغلاف:</b> نوع المشروع، اسمه بخط كبير، سطر واحد بالعربي عن فكرته، ولقطة الصفحة الرئيسية.</small>
+            </div>
+
+            <!-- Slide 2: screenshot -->
+            <div class="post-wrap">
+                <div class="post p-shot"><div class="post-in">
+                    <div class="p-brand"><svg><use href="#sm"/></svg><span>Saleh Mohammed</span><em>02 / 04</em></div>
+                    <div class="p-cap">
+                        <div class="p-eyebrow">Feature</div>
+                        <b>Attendance tracking</b>
+                        <div class="p-sub">تسجيل حضور الطلاب لكل حلقة</div>
+                    </div>
+                    <div class="browser"><div class="bar"><i></i><i></i><i></i><span>tulab-alwahy.com/attendance</span></div><div class="shot">لقطة شاشة الميزة</div></div>
+                    <div class="p-foot" style="margin-top:4.5cqw"><span><b>salehmohammed.com</b></span><div class="p-dots"><i></i><i class="on"></i><i></i><i></i></div></div>
+                </div></div>
+                <small><b>2. الميزات:</b> شريحة لكل ميزة مهمة (1 إلى 3 شرائح). عنوان قصير ولقطة شاشة كبيرة.</small>
+            </div>
+
+            <!-- Slide 3: stack -->
+            <div class="post-wrap">
+                <div class="post p-stack"><div class="post-in">
+                    <div class="p-brand"><svg><use href="#sm"/></svg><span>Saleh Mohammed</span><em>03 / 04</em></div>
+                    <div class="p-text">
+                        <div class="p-eyebrow">Built with</div>
+                        <div class="p-title" style="font-size:7.6cqw">Full stack,<br>end to end.</div>
+                        <div class="grid-tags"><span>ASP.NET Core</span><span>Blazor</span><span>EF Core</span><span>SQL Server</span></div>
+                        <ul>
+                            <li>Backend API &amp; database design</li>
+                            <li>Blazor web interface</li>
+                            <li>Deployment &amp; hosting</li>
+                        </ul>
+                    </div>
+                    <div class="p-foot"><span><b>salehmohammed.com</b></span><div class="p-dots"><i></i><i></i><i class="on"></i><i></i></div></div>
+                </div></div>
+                <small><b>3. التقنيات ودوري:</b> وسوم التقنيات المستخدمة فعلاً، وما الذي بنيته أنا في المشروع.</small>
+            </div>
+
+            <!-- Slide 4: CTA -->
+            <div class="post-wrap">
+                <div class="post p-cta"><div class="post-in">
+                    <svg class="big" fill="#fff"><use href="#sm-letters"/></svg>
+                    <div class="p-title">Have a project<br>in mind?</div>
+                    <div class="p-sub">عندك فكرة موقع أو نظام؟ تواصل معي</div>
+                    <div class="url">salehmohammed.com</div>
+                    <div class="handle">@salehmohmmmd</div>
+                    <div class="p-foot"><span>Full Stack Developer</span><div class="p-dots"><i></i><i></i><i></i><i class="on"></i></div></div>
+                </div></div>
+                <small><b>4. الختام:</b> الشريحة الوحيدة بخلفية بنفسجية. الحرفان بدون المربّع، والرابط داخل حبّة سوداء.</small>
+            </div>
+        </div>
+
+        <p style="color:var(--gray);font-size:14px">المحتوى أعلاه مثال لتوضيح الشكل. لقطات الشاشة والتقنيات وعدد الشرائح تتغيّر حسب كل مشروع.</p>
+
+        <div class="spec-grid">
+            <div class="panel"><b>الهوامش</b><span><code>80px</code> من كل جهة على تصميم <code>1080px</code>. لا شيء مهم خارجها، لأن Instagram يقصّ الأطراف في الشبكة.</span></div>
+            <div class="panel"><b>الشريط العلوي</b><span>الشعار <code>64px</code> + الاسم أعلى اليسار، ورقم الشريحة <code>01 / 04</code> أعلى اليمين. ثابت في كل الشرائح عدا الأخيرة.</span></div>
+            <div class="panel"><b>الشريط السفلي</b><span>الرابط <code>salehmohammed.com</code> أسفل اليسار، ونقاط الشرائح أسفل اليمين، والنقطة الحالية بنفسجية.</span></div>
+            <div class="panel"><b>لقطات الشاشة</b><span>داخل إطار متصفّح داكن بزوايا دائرية، أو إطار جوال للمواقع المصمّمة للجوال. لقطة حقيقية من الموقع، لا رسم.</span></div>
+            <div class="panel"><b>بيانات العميل</b><span>لا تظهر أسماء أو أرقام أو بيانات حقيقية لعملاء الموقع في اللقطات. استخدم بيانات تجريبية أو اطمسها.</span></div>
+            <div class="panel"><b>منشور منفرد</b><span>لو كان المنشور صورة واحدة فقط: استخدم شكل الغلاف، بمقاس <code>1080 × 1350</code> أيضاً.</span></div>
+        </div>
+
+        <div class="panel" style="display:grid;gap:14px">
+            <h3>قالب الوصف (Caption)</h3>
+            <pre id="caption">مشروع جديد: [اسم المشروع] 🟣
+
+[سطر واحد: ماذا يفعل الموقع ولمن]
+
+ما بنيته:
+▫️ [الميزة الأولى]
+▫️ [الميزة الثانية]
+▫️ [الميزة الثالثة]
+
+التقنيات: ASP.NET Core · Blazor · SQL Server
+
+عندك فكرة موقع أو نظام؟ راسلني
+🔗 salehmohammed.com
+
+#dotnet #blazor #aspnetcore #fullstack #webdevelopment #مطور_مواقع #برمجة</pre>
+            <div class="copy-row"><button class="copy" type="button" data-target="caption">نسخ القالب</button><span id="caption-msg" role="status"></span></div>
+        </div>
+    </section>
+
+    <!-- ================= 07 TOKENS ================= -->
+    <section>
+        <div class="sec-head">
+            <div class="sec-label">07 · Tokens</div>
+            <h2>القيم الجاهزة للنسخ</h2>
+            <p>للمصمّم أو لأي أداة ذكاء اصطناعي: هذه كل قيم الهوية في مكان واحد. انسخها كما هي.</p>
+        </div>
+        <pre class="code" id="tokens">:root {
+  /* Saleh Mohammed brand tokens v1.0 */
+  --sm-black:       #000000;  /* main background */
+  --sm-white:       #FFFFFF;  /* headings, main text */
+  --sm-violet:      #6D4AFF;  /* logo, buttons, large shapes, last slide */
+  --sm-violet-soft: #8B72FF;  /* small violet text on black */
+  --sm-violet-deep: #5333E6;  /* hover / pressed */
+  --sm-gray:        #888888;  /* secondary text */
+  --sm-line:        #333333;  /* borders, dividers */
+
+  --sm-font-en:   'Inter', system-ui, sans-serif;               /* 800 headings, 500 labels, 400 body */
+  --sm-font-ar:   'IBM Plex Sans Arabic', 'Segoe UI', sans-serif; /* 700 headings, 400 body */
+  --sm-font-code: 'JetBrains Mono', Consolas, monospace;
+
+  --sm-heading-tracking: -0.04em;
+  --sm-label-tracking:    0.15em;  /* uppercase */
+  --sm-logo-radius:       22%;     /* rx 14 of 64 */
+  --sm-pill-radius:       999px;
+
+  /* Instagram: 1080 x 1350 (4:5), 80px margins, logo 64px top-left */
+}</pre>
+        <div class="copy-row"><button class="copy" type="button" data-target="tokens">نسخ القيم</button><span id="tokens-msg" role="status"></span></div>
+    </section>
+
+    <footer>
+        <span class="en">Saleh Mohammed · Brand Guide v1.0</span>
+        <span class="en">salehmohammed.com · @salehmohmmmd</span>
+    </footer>
+</div>
+
+<script>
+    document.querySelectorAll('button.copy').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const id = btn.dataset.target;
+            const el = document.getElementById(id);
+            const msg = document.getElementById(id + '-msg');
+            try {
+                await navigator.clipboard.writeText(el.textContent);
+                msg.textContent = 'تم النسخ';
+            } catch {
+                const range = document.createRange();
+                range.selectNodeContents(el);
+                const sel = getSelection();
+                sel.removeAllRanges();
+                sel.addRange(range);
+                msg.textContent = 'النص محدّد، اضغط Ctrl+C';
+            }
+            setTimeout(() => { msg.textContent = ''; }, 2500);
+        });
+    });
+</script>
+</body>
+</html>

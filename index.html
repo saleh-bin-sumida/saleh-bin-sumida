@@ -24,6 +24,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        :root {
+            --violet: #6D4AFF;
+            --violet-soft: #8B72FF; /* readable violet for small text on black */
+        }
+
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         html, body { height: 100%; }
@@ -50,7 +55,7 @@
 
         .role {
             margin-top: 1.25rem;
-            color: #888;
+            color: var(--violet-soft);
             font-size: clamp(1rem, 2.5vw, 1.5rem);
             font-weight: 500;
             letter-spacing: 0.15em;
@@ -79,9 +84,9 @@
         }
 
         nav a:hover, nav a:focus-visible {
-            color: #000;
-            background: #fff;
-            border-color: #fff;
+            color: #fff;
+            background: var(--violet);
+            border-color: var(--violet);
             outline: none;
         }
 
@@ -97,6 +102,7 @@
     <nav aria-label="Links">
         <a href="https://github.com/saleh-bin-sumida" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a>
         <a href="https://www.linkedin.com/in/saleh-mohammd/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
+        <a href="https://www.instagram.com/salehmohmmmd/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i>Instagram</a>
         <a href="https://leetcode.com/SalehMohammed" target="_blank" rel="noopener"><i class="fa-solid fa-code"></i>LeetCode</a>
         <a href="mailto:salhbnsmyd3@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
         <a href="https://wa.me/967777753928" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>

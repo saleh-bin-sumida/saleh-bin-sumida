@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-    /* Layout: single dark column (max 1040px); each section = label + title + content; post examples in a 4-up grid of 4:5 frames */
+    /* Layout: single dark column (max 1040px); each section = label + title + content */
     :root {
         --black: #000000;
         --white: #FFFFFF;
@@ -157,74 +157,13 @@
     .pill.hover { background: var(--violet); border-color: var(--violet); color: var(--white); }
     .tag { display: inline-flex; padding: .3rem .8rem; border-radius: 999px; background: rgba(109, 74, 255, .14); border: 1px solid rgba(139, 114, 255, .35); color: var(--violet-soft); font-family: var(--font-brand); font-size: 13px; font-weight: 500; }
 
-    /* ---------- Instagram posts ---------- */
-    /* slides run left to right, like swiping on Instagram */
-    .posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px; direction: ltr; }
-    .post-wrap { display: grid; gap: 10px; min-width: 0; direction: rtl; align-content: start; }
-    .post-wrap > small { color: var(--gray); font-size: 13px; line-height: 1.5; }
-    .post-wrap > small b { color: var(--white); font-weight: 500; }
+    /* ---------- Instagram ---------- */
+    .lang { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; background: var(--surface); border: 1px solid var(--violet); border-radius: 16px; padding: 24px; }
+    .lang-mark { width: 64px; height: 64px; flex: none; border-radius: 14px; background: var(--violet); display: grid; place-items: center; font: 700 34px/1 var(--font-ar); }
+    .lang > div:not(.lang-mark) { flex: 1 1 280px; min-width: 0; display: grid; gap: 10px; }
+    .panel.free { display: grid; gap: 14px; }
 
-    /* every post is 1080x1350; all sizes are in cqw so the preview scales exactly (1cqw = 10.8px on the real canvas) */
-    .post {
-        container-type: inline-size;
-        aspect-ratio: 4 / 5;
-        width: 100%;
-        max-width: 100%;
-        border-radius: 10px;
-        overflow: hidden;
-        background: var(--black);
-        border: 1px solid var(--line);
-        direction: ltr;
-        font-family: var(--font-brand);
-        color: var(--white);
-    }
-    .post-in { position: relative; height: 100%; padding: 7.4cqw; display: flex; flex-direction: column; }
-    .p-brand { display: flex; align-items: center; gap: 2.4cqw; }
-    .p-brand svg { width: 6cqw; height: 6cqw; }
-    .p-brand span { font-weight: 800; font-size: 3.3cqw; letter-spacing: -.03em; }
-    .p-brand em { font-style: normal; margin-left: auto; font-weight: 500; font-size: 2.4cqw; letter-spacing: .15em; color: var(--gray); }
-    .p-eyebrow { font-weight: 500; font-size: 2.6cqw; letter-spacing: .15em; text-transform: uppercase; color: var(--violet-soft); }
-    .p-title { font-weight: 800; font-size: 9.6cqw; letter-spacing: -.04em; line-height: .98; }
-    .p-sub { font-family: var(--font-ar); font-size: 3.6cqw; color: #cfcfd4; direction: rtl; text-align: left; line-height: 1.5; }
-    .p-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-weight: 500; font-size: 2.5cqw; color: var(--gray); }
-    .p-foot b { color: var(--white); font-weight: 500; }
-    .p-dots { display: flex; gap: 1.1cqw; }
-    .p-dots i { width: 1.3cqw; height: 1.3cqw; border-radius: 50%; background: #444; }
-    .p-dots i.on { background: var(--violet); }
-
-    .browser { border-radius: 2cqw; border: .3cqw solid #2a2a2e; background: #121215; overflow: hidden; display: flex; flex-direction: column; }
-    .browser .bar { height: 5cqw; background: #1c1c20; display: flex; align-items: center; gap: 1cqw; padding: 0 2.2cqw; flex: none; }
-    .browser .bar i { width: 1.3cqw; height: 1.3cqw; border-radius: 50%; background: #3a3a40; }
-    .browser .bar span { margin-left: 2cqw; flex: 1; height: 2.6cqw; border-radius: 99px; background: #26262b; font-size: 1.6cqw; color: var(--gray); display: flex; align-items: center; padding-left: 1.6cqw; }
-    .browser .shot { flex: 1; display: grid; place-items: center; text-align: center; font-size: 2.2cqw; color: #6f6f78; background:
-        repeating-linear-gradient(135deg, #141417 0 1.4cqw, #17171b 1.4cqw 2.8cqw); }
-
-    .p-cover .p-text { display: grid; gap: 2.6cqw; margin-top: 6cqw; }
-    .p-cover .browser { margin-top: 5.5cqw; height: 44cqw; }
-
-    .p-shot .p-cap { margin-top: 5cqw; display: grid; gap: 1.6cqw; }
-    .p-shot .p-cap b { font-weight: 800; font-size: 5.6cqw; letter-spacing: -.03em; line-height: 1.05; }
-    .p-shot .browser { margin-top: 4.5cqw; flex: 1; }
-
-    .p-stack .p-text { margin-top: 9cqw; display: grid; gap: 3cqw; }
-    .p-stack .grid-tags { display: flex; flex-wrap: wrap; gap: 2cqw; margin-top: 2cqw; }
-    .p-stack .grid-tags span { padding: 1.6cqw 3.2cqw; border-radius: 99px; border: .25cqw solid rgba(139,114,255,.45); background: rgba(109,74,255,.14); color: var(--violet-soft); font-weight: 500; font-size: 3.2cqw; }
-    .p-stack ul { list-style: none; display: grid; gap: 2cqw; margin-top: 4cqw; }
-    .p-stack li { display: flex; gap: 2.4cqw; align-items: baseline; font-size: 3.4cqw; color: #d9d9de; }
-    .p-stack li::before { content: ""; width: 1.6cqw; height: 1.6cqw; border-radius: .4cqw; background: var(--violet); flex: none; transform: translateY(-.2cqw); }
-
-    .p-cta { background: var(--violet); }
-    .p-cta .post-in { justify-content: center; align-items: flex-start; gap: 4cqw; }
-    .p-cta svg.big { width: 18cqw; height: 18cqw; }
-    .p-cta .p-title { font-size: 8.4cqw; }
-    .p-cta .p-sub { color: rgba(255,255,255,.88); font-size: 3.8cqw; }
-    .p-cta .url { font-weight: 800; font-size: 5cqw; letter-spacing: -.02em; padding: 2cqw 4cqw; background: var(--black); border-radius: 99px; margin-top: 2cqw; }
-    .p-cta .handle { font-weight: 500; font-size: 3cqw; color: rgba(255,255,255,.85); }
-    .p-cta .p-dots i { background: rgba(255,255,255,.35); }
-    .p-cta .p-dots i.on { background: var(--white); }
-    .p-cta .p-foot { position: absolute; left: 7.4cqw; right: 7.4cqw; bottom: 7.4cqw; color: rgba(255,255,255,.8); }
-
-    .spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 12px; }
+    .spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 12px; }
     .spec-grid .panel { padding: 18px 20px; display: grid; gap: 6px; align-content: start; }
     .spec-grid .panel b { font-size: 15px; }
     .spec-grid .panel span { color: #cfcfd4; font-size: 14px; line-height: 1.65; }
@@ -291,7 +230,7 @@
             <span class="en">salehmohammed.com</span>
         </div>
         <div class="note">
-            <p><strong>لمن يصمّم منشوراً أو صفحة لي:</strong> هذا الملف هو المرجع الوحيد للشعار والألوان والخطوط وشكل منشورات Instagram. اتبعه كما هو. إن احتجت قراراً غير موجود هنا، اختر الأبسط والأقرب لروح الصفحة: أسود وأبيض، ولمسة بنفسجية واحدة. القيم الجاهزة للنسخ موجودة في آخر الملف.</p>
+            <p><strong>لمن يصمّم منشوراً أو صفحة لي:</strong> هذا الملف هو المرجع للشعار والألوان والخطوط. اتبع قواعد الهوية كما هي، أما تصميم المنشورات نفسها فمتروك لإبداعك ضمن هذه القواعد. القيم الجاهزة للنسخ موجودة في آخر الملف.</p>
         </div>
     </header>
 
@@ -316,7 +255,7 @@
             <ul class="rules" style="margin-top:14px">
                 <li><strong>بسيط ومباشر:</strong> مساحات سوداء واسعة، ونص أبيض كبير، ولا زخارف.</li>
                 <li><strong>تقني بلا مبالغة:</strong> الكود والتقنيات تُذكر بأسمائها، بدون رسومات "هاكر" أو خلفيات أكواد مزدحمة.</li>
-                <li><strong>البنفسجي توقيع، لا خلفية:</strong> يظهر في الشعار وفي لمسة واحدة أو اثنتين في كل تصميم. الاستثناء الوحيد: الشريحة الأخيرة في المنشور.</li>
+                <li><strong>البنفسجي توقيع، لا خلفية:</strong> يظهر في الشعار وفي لمسة واحدة أو اثنتين في كل تصميم. ويجوز أن يكون خلفية كاملة لشريحة حين يخدم ذلك التصميم.</li>
                 <li><strong>العمل هو البطل:</strong> لقطة شاشة الموقع أكبر عنصر في المنشور، والنص يخدمها.</li>
             </ul>
         </div>
@@ -377,7 +316,7 @@
             <figure><div class="demo"><svg style="filter:drop-shadow(0 0 10px #8B72FF) drop-shadow(0 6px 6px #000)"><use href="#sm"/></svg></div><figcaption>لا ظلال ولا توهّج ولا تدرّجات</figcaption></figure>
             <figure><div class="demo"><svg style="transform:rotate(-14deg)"><use href="#sm"/></svg></div><figcaption>لا تُدِره</figcaption></figure>
         </div>
-        <p>على خلفية بنفسجية (الشريحة الأخيرة فقط) استخدم الحرفين وحدهما بالأبيض بدون المربّع.</p>
+        <p>على خلفية بنفسجية استخدم الحرفين وحدهما بالأبيض بدون المربّع.</p>
     </section>
 
     <!-- ================= 03 COLOR ================= -->
@@ -397,7 +336,7 @@
         <div class="swatches">
             <div class="swatch"><div class="chip" style="background:#000;border-bottom:1px solid var(--line)"></div><div class="info"><b>Black</b><code>#000000</code><small>الخلفية الأساسية لكل شيء</small></div></div>
             <div class="swatch"><div class="chip" style="background:#fff"></div><div class="info"><b>White</b><code>#FFFFFF</code><small>العناوين والنصوص الأساسية</small></div></div>
-            <div class="swatch"><div class="chip" style="background:#6D4AFF"></div><div class="info"><b>Violet</b><code>#6D4AFF</code><small>الشعار، الأزرار، العناصر الكبيرة، خلفية الشريحة الأخيرة</small></div></div>
+            <div class="swatch"><div class="chip" style="background:#6D4AFF"></div><div class="info"><b>Violet</b><code>#6D4AFF</code><small>الشعار، الأزرار، العناصر الكبيرة، الخلفيات البنفسجية</small></div></div>
             <div class="swatch"><div class="chip" style="background:#8B72FF"></div><div class="info"><b>Violet Soft</b><code>#8B72FF</code><small>النص البنفسجي الصغير فوق الأسود</small></div></div>
             <div class="swatch"><div class="chip" style="background:#5333E6"></div><div class="info"><b>Violet Deep</b><code>#5333E6</code><small>حالة الضغط ومرور الماوس على البنفسجي</small></div></div>
             <div class="swatch"><div class="chip" style="background:#888"></div><div class="info"><b>Gray</b><code>#888888</code><small>النصوص الثانوية: الرابط، التاريخ، الملاحظات</small></div></div>
@@ -488,102 +427,49 @@
         <div class="sec-head">
             <div class="sec-label">06 · Instagram</div>
             <h2>منشورات الأعمال على Instagram</h2>
-            <p>كل مشروع يُنشر كـ <strong>Carousel</strong> من 4 إلى 6 شرائح بمقاس <code>1080 × 1350</code> (عمودي 4:5). الترتيب ثابت دائماً، فيعرف المتابع ماذا ينتظر في كل شريحة. هذا مثال بمشروع حقيقي:</p>
+            <p>لا يوجد قالب ثابت للمنشورات. شكل كل منشور، وعدد شرائحه، وترتيبها، متروك لإبداع المصمّم. الثابت هو الهوية فقط: الشعار والألوان والخطوط في هذا الملف، والقواعد القليلة التالية.</p>
         </div>
 
-        <div class="posts">
-            <!-- Slide 1: cover -->
-            <div class="post-wrap">
-                <div class="post p-cover"><div class="post-in">
-                    <div class="p-brand"><svg><use href="#sm"/></svg><span>Saleh Mohammed</span><em>01 / 04</em></div>
-                    <div class="p-text">
-                        <div class="p-eyebrow">New Project · SaaS</div>
-                        <div class="p-title">Tulab<br>Al-Wahy</div>
-                        <div class="p-sub">منصة لإدارة حلقات تحفيظ القرآن</div>
-                    </div>
-                    <div class="browser"><div class="bar"><i></i><i></i><i></i><span>tulab-alwahy.com</span></div><div class="shot">لقطة الصفحة الرئيسية</div></div>
-                    <div class="p-foot"><span><b>salehmohammed.com</b></span><div class="p-dots"><i class="on"></i><i></i><i></i><i></i></div></div>
-                </div></div>
-                <small><b>1. الغلاف:</b> نوع المشروع، اسمه بخط كبير، سطر واحد بالعربي عن فكرته، ولقطة الصفحة الرئيسية.</small>
-            </div>
-
-            <!-- Slide 2: screenshot -->
-            <div class="post-wrap">
-                <div class="post p-shot"><div class="post-in">
-                    <div class="p-brand"><svg><use href="#sm"/></svg><span>Saleh Mohammed</span><em>02 / 04</em></div>
-                    <div class="p-cap">
-                        <div class="p-eyebrow">Feature</div>
-                        <b>Attendance tracking</b>
-                        <div class="p-sub">تسجيل حضور الطلاب لكل حلقة</div>
-                    </div>
-                    <div class="browser"><div class="bar"><i></i><i></i><i></i><span>tulab-alwahy.com/attendance</span></div><div class="shot">لقطة شاشة الميزة</div></div>
-                    <div class="p-foot" style="margin-top:4.5cqw"><span><b>salehmohammed.com</b></span><div class="p-dots"><i></i><i class="on"></i><i></i><i></i></div></div>
-                </div></div>
-                <small><b>2. الميزات:</b> شريحة لكل ميزة مهمة (1 إلى 3 شرائح). عنوان قصير ولقطة شاشة كبيرة.</small>
-            </div>
-
-            <!-- Slide 3: stack -->
-            <div class="post-wrap">
-                <div class="post p-stack"><div class="post-in">
-                    <div class="p-brand"><svg><use href="#sm"/></svg><span>Saleh Mohammed</span><em>03 / 04</em></div>
-                    <div class="p-text">
-                        <div class="p-eyebrow">Built with</div>
-                        <div class="p-title" style="font-size:7.6cqw">Full stack,<br>end to end.</div>
-                        <div class="grid-tags"><span>ASP.NET Core</span><span>Blazor</span><span>EF Core</span><span>SQL Server</span></div>
-                        <ul>
-                            <li>Backend API &amp; database design</li>
-                            <li>Blazor web interface</li>
-                            <li>Deployment &amp; hosting</li>
-                        </ul>
-                    </div>
-                    <div class="p-foot"><span><b>salehmohammed.com</b></span><div class="p-dots"><i></i><i></i><i class="on"></i><i></i></div></div>
-                </div></div>
-                <small><b>3. التقنيات ودوري:</b> وسوم التقنيات المستخدمة فعلاً، وما الذي بنيته أنا في المشروع.</small>
-            </div>
-
-            <!-- Slide 4: CTA -->
-            <div class="post-wrap">
-                <div class="post p-cta"><div class="post-in">
-                    <svg class="big" fill="#fff"><use href="#sm-letters"/></svg>
-                    <div class="p-title">Have a project<br>in mind?</div>
-                    <div class="p-sub">عندك فكرة موقع أو نظام؟ تواصل معي</div>
-                    <div class="url">salehmohammed.com</div>
-                    <div class="handle">@salehmohmmmd</div>
-                    <div class="p-foot"><span>Full Stack Developer</span><div class="p-dots"><i></i><i></i><i></i><i class="on"></i></div></div>
-                </div></div>
-                <small><b>4. الختام:</b> الشريحة الوحيدة بخلفية بنفسجية. الحرفان بدون المربّع، والرابط داخل حبّة سوداء.</small>
+        <div class="lang">
+            <div class="lang-mark" aria-hidden="true">ع</div>
+            <div>
+                <h3>نصوص المنشور بالعربية فقط</h3>
+                <p>كل نص داخل التصميم بالعربية: العناوين والشرح والدعوة للتواصل. لا جمل إنجليزية ولا عناوين بلغتين، فتبقى المساحة كلها للمحتوى.</p>
+                <p>الاستثناء: الأسماء التي ليس لها مقابل عربي تُكتب كما هي، مثل الرابط <code>salehmohammed.com</code>، والحساب <code>@salehmohmmmd</code>، وأسماء التقنيات مثل <span class="en">Blazor</span>، واسم المشروع إن كان اسمه الرسمي إنجليزياً.</p>
+                <p>خط النصوص العربية: <span class="en">IBM Plex Sans Arabic</span>.</p>
             </div>
         </div>
-
-        <p style="color:var(--gray);font-size:14px">المحتوى أعلاه مثال لتوضيح الشكل. لقطات الشاشة والتقنيات وعدد الشرائح تتغيّر حسب كل مشروع.</p>
 
         <div class="spec-grid">
-            <div class="panel"><b>الهوامش</b><span><code>80px</code> من كل جهة على تصميم <code>1080px</code>. لا شيء مهم خارجها، لأن Instagram يقصّ الأطراف في الشبكة.</span></div>
-            <div class="panel"><b>الشريط العلوي</b><span>الشعار <code>64px</code> + الاسم أعلى اليسار، ورقم الشريحة <code>01 / 04</code> أعلى اليمين. ثابت في كل الشرائح عدا الأخيرة.</span></div>
-            <div class="panel"><b>الشريط السفلي</b><span>الرابط <code>salehmohammed.com</code> أسفل اليسار، ونقاط الشرائح أسفل اليمين، والنقطة الحالية بنفسجية.</span></div>
-            <div class="panel"><b>لقطات الشاشة</b><span>داخل إطار متصفّح داكن بزوايا دائرية، أو إطار جوال للمواقع المصمّمة للجوال. لقطة حقيقية من الموقع، لا رسم.</span></div>
+            <div class="panel"><b>الشعار</b><span>يظهر في كل منشور، في المكان الذي يناسب التصميم، بحجم لا يقل عن <code>64px</code> على عرض <code>1080px</code>، مع احترام قواعد الشعار في القسم 02.</span></div>
+            <div class="panel"><b>الرابط</b><span><code>salehmohammed.com</code> يظهر مرة واحدة على الأقل في المنشور.</span></div>
+            <div class="panel"><b>الألوان</b><span>الأسود والأبيض أساس، والبنفسجي لمسة مميزة. يجوز أن تكون شريحة كاملة بنفسجية حين يخدم ذلك التصميم.</span></div>
+            <div class="panel"><b>العمل هو البطل</b><span>لقطات شاشة حقيقية من المشروع، كبيرة وواضحة. لا رسومات بدلاً منها.</span></div>
             <div class="panel"><b>بيانات العميل</b><span>لا تظهر أسماء أو أرقام أو بيانات حقيقية لعملاء الموقع في اللقطات. استخدم بيانات تجريبية أو اطمسها.</span></div>
-            <div class="panel"><b>منشور منفرد</b><span>لو كان المنشور صورة واحدة فقط: استخدم شكل الغلاف، بمقاس <code>1080 × 1350</code> أيضاً.</span></div>
+            <div class="panel"><b>المقاس</b><span>يُفضّل <code>1080 × 1350</code> (عمودي 4:5). أبعد النصوص المهمة عن الأطراف، لأن Instagram يقصّها في شبكة الحساب.</span></div>
         </div>
 
-        <div class="panel" style="display:grid;gap:14px">
-            <h3>قالب الوصف (Caption)</h3>
-            <pre id="caption">مشروع جديد: [اسم المشروع] 🟣
+        <div class="panel free">
+            <h3>متروك للمصمّم</h3>
+            <ul class="rules">
+                <li>التخطيط وتوزيع العناصر في كل شريحة.</li>
+                <li>عدد الشرائح وترتيبها، أو منشور بصورة واحدة.</li>
+                <li>طريقة عرض لقطات الشاشة: إطار متصفّح، جوال، لابتوب، أو بلا إطار.</li>
+                <li>الأشكال والعناصر الجمالية، ما دامت بألوان الهوية.</li>
+                <li>صياغة العناوين والنصوص.</li>
+                <li>تصميم الـ Reels والحركة.</li>
+            </ul>
+        </div>
 
-[سطر واحد: ماذا يفعل الموقع ولمن]
-
-ما بنيته:
-▫️ [الميزة الأولى]
-▫️ [الميزة الثانية]
-▫️ [الميزة الثالثة]
-
-التقنيات: ASP.NET Core · Blazor · SQL Server
-
-عندك فكرة موقع أو نظام؟ راسلني
-🔗 salehmohammed.com
-
-#dotnet #blazor #aspnetcore #fullstack #webdevelopment #مطور_مواقع #برمجة</pre>
-            <div class="copy-row"><button class="copy" type="button" data-target="caption">نسخ القالب</button><span id="caption-msg" role="status"></span></div>
+        <div class="panel free">
+            <h3>الوصف (Caption)</h3>
+            <p>بالعربية أيضاً. يحتوي عادةً على:</p>
+            <ul class="rules">
+                <li>اسم المشروع، وسطر واحد عن فكرته ولمن صُنع.</li>
+                <li>أهم ما بنيته فيه.</li>
+                <li>دعوة للتواصل مع الرابط <code>salehmohammed.com</code>.</li>
+                <li>وسوم عربية، مثل <span dir="rtl">#مطور_مواقع #برمجة #تصميم_مواقع</span>.</li>
+            </ul>
         </div>
     </section>
 
@@ -613,7 +499,7 @@
   --sm-logo-radius:       22%;     /* rx 14 of 64 */
   --sm-pill-radius:       999px;
 
-  /* Instagram: 1080 x 1350 (4:5), 80px margins, logo 64px top-left */
+  /* Instagram: Arabic text only, 1080 x 1350 (4:5) preferred, layout is free */
 }</pre>
         <div class="copy-row"><button class="copy" type="button" data-target="tokens">نسخ القيم</button><span id="tokens-msg" role="status"></span></div>
     </section>
